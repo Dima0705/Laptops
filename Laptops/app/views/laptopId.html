@@ -1,0 +1,216 @@
+﻿<style>
+    table{
+
+        width:800px;
+    }
+    td, th{
+        padding:5px;
+        padding-bottom:10px;
+    }
+    tr {
+        border-bottom: 1px solid lightgrey;
+    }
+    img {
+        vertical-align: middle;
+    }
+</style>
+<div>
+    <div >
+        <table>
+            <tr class="trNone" style="background-color:#e9ae36"><td colspan="2"><h2>Ноутбук {{item.Name}}</h2></td></tr>
+            <tr class="trNone" style="border-bottom: none" >
+                <td width="200px">
+                    <img style="padding:5px" width="180px" ng-src="app/images/{{item.MainPicture}}">
+                </td>
+                <td style="font-weight:lighter; color:gray">
+                    {{item.ScreenDiagonal + '"' + ' ' + item.ScreenHeightPx + ' x ' + item.ScreenWidthPx + ' ' + item.ScreenSurface + ', ' }}
+                    {{item.CPU + ' ' + item.CPUName + ' ' + item.CPUFrequency + ' МГц, ' + item.SizeRAM + ' Гб, ' + item.SizeHD + ' Гб ('}}
+                    {{item.TypeHD + '), ' + item.GA + ' (' + item.TypeGA + '), цвет крышки ' + item.CapColor + ', цвет корпуса ' + item.BodyColor}}
+                    {{' , габариты ' + item.Width + ' x ' + item.Depth + ' x ' + item.Thickness + ' мм, вес ' + item.Weight + ' г, '}}
+                    {{'тип ' + item.Type + ', год выхода на рынок ' + item.ReleaseDate + ' г'}}
+
+                </td>
+            </tr>
+            <tr style="background-color: rgba(233, 233, 233, 0.89); border-bottom: none"><td colspan="2" style="font-weight:bolder; font-size:x-large; height:70px; color:rgba(12, 25, 105, 0.92)">Цена: {{item.Price + ' р.'}}</td></tr>
+        </table>
+    </div>
+    <div class="divLeft"  ng-repeat="i in item.PictureList"> <img ng-src="app/images/{{i.PictureName}}" ng-click="changePicture(i.PictureName)" width="150px" /> </div>
+    <div class="divMainPicture" style="background-color:white">
+        <img class="imgMain" src="app/images/{{viewPicture}}" ng-style="styleWidthPic" />
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2" class="grey">Общая информация</td>
+            </tr>
+            <tr>
+                <td style="width : 45%">Год выхода на рынок</td>
+                <td class="boldValue">{{item.ReleaseDate}} г</td>
+            </tr>
+            <tr>
+                <td>Тип</td>
+                <td class="boldValue">{{item.Type}}</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Процессор</td>
+            </tr>
+            <tr>
+                <td>Процессор</td>
+                <td class="boldValue">{{item.CPU}}</td>
+            </tr>
+            <tr>
+                <td>Модель процессора</td>
+                <td class="boldValue">{{item.CPUName}}</td>
+            </tr>
+            <tr>
+                <td>Количество ядер</td>
+                <td class="boldValue">{{item.NumberOfCores}}</td>
+            </tr>
+            <tr>
+                <td>Частота процессора</td>
+                <td class="boldValue">{{item.CPUFrequency}} МГц</td>
+            </tr>
+            <tr>
+                <td>Энергопотребление</td>
+                <td class="boldValue">{{item.CPUFrequency}} Вт</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Конструкция</td>
+            </tr>
+            <tr>
+                <td>Материал корпуса</td>
+                <td class="boldValue">{{item.BodyMaterial}}</td>
+            </tr>
+            <tr>
+                <td>Цвет корпуса</td>
+                <td class="boldValue">{{item.BodyColor}}</td>
+            </tr>
+            <tr>
+                <td>Материал крышки</td>
+                <td class="boldValue">{{item.CapMaterial}}</td>
+            </tr>
+            <tr>
+                <td>Цвет крышки</td>
+                <td class="boldValue">{{item.CapColor}}</td>
+            </tr>
+            <tr>
+                <td>Пыле-, влаго-, ударопрочность</td>
+                <td class="boldValue">{{(item.IsStrength == undefined || item.IsStrength == "") ? 'Нет' : item.IsStrength}}</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Размеры и вес</td>
+            </tr>
+            <tr>
+                <td>Ширина</td>
+                <td class="boldValue">{{item.Width}} мм</td>
+            </tr>
+            <tr>
+                <td>Глубина</td>
+                <td class="boldValue">{{item.Depth}} мм</td>
+            </tr>
+            <tr>
+                <td>Толщина</td>
+                <td class="boldValue">{{item.Thickness}} мм</td>
+            </tr>
+            <tr>
+                <td>Вес</td>
+                <td class="boldValue">{{item.Weight}} г</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Экран</td>
+            </tr>
+            <tr>
+                <td>Диагональ экрана</td>
+                <td class="boldValue">{{item.ScreenDiagonal + '"'}}</td>
+            </tr>
+            <tr>
+                <td>Разрешение экрана</td>
+                <td class="boldValue">{{item.ScreenHeightPx + ' x ' + item.ScreenWidthPx}}</td>
+            </tr>
+            <tr>
+                <td>Технология экрана</td>
+                <td class="boldValue">{{item.ScreenTechnology}}</td>
+            </tr>
+            <tr>
+                <td>Поверхность экрана</td>
+                <td class="boldValue">{{item.ScreenSurface}}</td>
+            </tr>
+            <tr>
+                <td>Поддержка 3D</td>
+                <td class="boldValue">{{item.Is3DScreen ? 'Да' : 'Нет'}}</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Оперативная память</td>
+            </tr>
+            <tr>
+                <td>Тип оперативной памяти</td>
+                <td class="boldValue">{{item.TypeRAM}}</td>
+            </tr>
+            <tr>
+                <td>Объем памяти</td>
+                <td class="boldValue">{{item.SizeRAM + ' Гб'}}</td>
+            </tr>
+            <tr>
+                <td>Максимальный объем памяти</td>
+                <td class="boldValue">{{item.MaxSizeRAM + ' Гб'}}</td>
+            </tr>
+            <tr>
+                <td>Количество слотов памяти</td>
+                <td class="boldValue">{{item.NumberOfRAMSlots + (item.NumberOfRAMSlots > 4 ? ' слотов' : (item.NumberOfRAMSlots == 1) ? ' слот': ' слота')}}</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Хранение данных</td>
+            </tr>
+            <tr>
+                <td>Тип жесткого диска</td>
+                <td class="boldValue">{{item.TypeHD}}</td>
+            </tr>
+            <tr>
+                <td>Емкость жесткого диска</td>
+                <td class="boldValue">{{item.SizeHD + ' Гб'}}</td>
+            </tr>
+            <tr>
+                <td>Скорость вращения</td>
+                <td class="boldValue">{{item.SpeedHD + ' RPM'}}</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Графика</td>
+            </tr>
+            <tr>
+                <td>Графический адаптер</td>
+                <td class="boldValue">{{item.GA}}</td>
+            </tr>
+            <tr>
+                <td>Тип графического адаптера</td>
+                <td class="boldValue">{{item.TypeGA}}</td>
+            </tr>
+            <tr>
+                <td>Объем видеопамяти</td>
+                <td class="boldValue">{{item.SizeVRAM < 1000 ? item.SizeVRAM + ' Мб' : item.SizeVRAM/1000 + ' Гб'}}</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" class="grey">Аккумулятор</td>
+            </tr>
+            <tr>
+                <td>Количество ячеек аккумулятора</td>
+                <td class="boldValue">{{item.NumberOfBatteryCells}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+﻿<div>
+    <br/><br/>
+    <table width="80%">
+        <tr>
+            <td>
+                <input ng-model="search" placeholder="Введите название" />
+            </td>
+            <td align="right">
+                <select ng-model="orderProp">
+                    <option value="Name">Название</option>
+                    <option value="ReleaseDate">Год выпуска</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <br /><br/>
+    <br />
+    <div ng-repeat="item in items | filter:search | orderBy:orderProp">
+        <br />
+        <table width="100%">
+            <tbody>
+                <tr >
+                    <td width="150px" rowspan="2"><img style="padding:5px" width="140px" ng-src="app/images/{{item.MainPicture}}"></td> <!--border: 2px solid lightgray;-->
+                    <td style="font-weight: 900; font-size: large" class="tdPadd"><a href="#/laptops/{{item.Id}}">{{item.Name}}</a></td>
+                    <td width="30%" style="font-weight: 900; font-size: large" class="tdPadd">{{item.Price + ' р.'}}</td>
+                </tr>
+                <tr >
+                    <td style="font-weight: lighter; color: grey" class="tdPadd">
+                        {{item.ScreenDiagonal + '"' + ' ' + item.ScreenHeightPx + ' x ' + item.ScreenWidthPx + ' ' + item.ScreenSurface + ', ' }}
+                        {{item.CPU + ' ' + item.CPUName + ' ' + item.CPUFrequency + ' МГц, ' + item.SizeRAM + ' Гб, ' + item.SizeHD + ' Гб ('}}
+                        {{item.TypeHD + '), ' + item.GA + ' (' + item.TypeGA + '), цвет крышки ' + item.CapColor + ', цвет корпуса ' + item.BodyColor}}
+                        {{' , габариты ' + item.Width + ' x ' + item.Depth + ' x ' + item.Thickness + ' мм, вес ' + item.Weight + ' г, '}}
+                        {{'тип ' + item.Type + ', год выхода на рынок ' + item.ReleaseDate + ' г'}}
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+    </div>
+
+</div>
