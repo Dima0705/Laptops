@@ -139,6 +139,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PicturesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -183,12 +184,16 @@
     <Content Include="app\images\MSI GE62 6QD-013XPL Apache Pro_4.jpg" />
     <Content Include="app\images\MSI GE62 6QD-013XPL Apache Pro_5.jpg" />
     <Content Include="app\images\MSI GE62 6QD-013XPL Apache Pro_Main.jpg" />
+    <Content Include="app\js\controllers\delController.js" />
     <Content Include="app\js\controllers\laptopIdController.js" />
     <Content Include="app\js\controllers\laptopListController.js" />
     <Content Include="app\js\lib\angular-route.js" />
     <Content Include="app\js\lib\angular.js" />
+    <Content Include="app\services\createService.js" />
+    <Content Include="app\services\delService.js" />
     <Content Include="app\services\laptopIdService.js" />
     <Content Include="app\services\laptopListService.js" />
+    <Content Include="app\services\putService.js" />
     <Content Include="app\views\laptopsList.html" />
     <Content Include="app\views\laptopId.html" />
     <Content Include="App_Data\LaptopsDB.mdf" />

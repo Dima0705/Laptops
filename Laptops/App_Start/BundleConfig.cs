@@ -25,6 +25,9 @@ namespace Laptops
             "~/app/js/lib/angular-route.js",
             "~/app/app.js",
             "~/app/services/laptopListService.js",
+            "~/app/services/delService.js",
+            "~/app/services/createService.js",
+            "~/app/services/putService.js",
             "~/app/services/laptopIdService.js",
             "~/app/js/controllers/laptopListController.js",
             "~/app/js/controllers/laptopIdController.js"));

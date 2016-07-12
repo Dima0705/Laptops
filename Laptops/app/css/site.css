@@ -54,3 +54,24 @@ div.divLeft {
 .tdPadd {
     padding-left: 20px;
 }
+
+td.tdPaddingForFirstTd {
+    padding-top:5px;
+    padding-right:5px;
+    padding-bottom:5px;
+    padding-left:170px;
+    width:50%;
+}
+.inputSizeInputForLp{
+    height:25px; 
+    width:50%
+}
+td.tdPaddForSecondTd {
+    padding:5px;
+    padding-bottom:5px;
+}
+td.tdFormZag {
+    padding:5px;
+    padding-bottom:10px;
+    text-align:center;
+}

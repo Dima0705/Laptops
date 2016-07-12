@@ -6,38 +6,499 @@
                 <input ng-model="search" placeholder="Введите название" />
             </td>
             <td align="right">
-                <select ng-model="orderProp">
+                <select ng-model="orderProp" style="height:25px; width:150px">
+                    <option value="Id">Отсутствует</option>
                     <option value="Name">Название</option>
                     <option value="ReleaseDate">Год выпуска</option>
                 </select>
+                <a ng-click="sortReverse = !sortReverse; symbolSort()">Порядок сортировки  <span style="font-weight:900; font-size:large">{{symbol}}</span> </a>
             </td>
         </tr>
     </table>
 
     <br /><br/>
     <br />
-    <div ng-repeat="item in items | filter:search | orderBy:orderProp">
-        <br />
-        <table width="100%">
-            <tbody>
-                <tr >
-                    <td width="150px" rowspan="2"><img style="padding:5px" width="140px" ng-src="app/images/{{item.MainPicture}}"></td> <!--border: 2px solid lightgray;-->
-                    <td style="font-weight: 900; font-size: large" class="tdPadd"><a href="#/laptops/{{item.Id}}">{{item.Name}}</a></td>
-                    <td width="30%" style="font-weight: 900; font-size: large" class="tdPadd">{{item.Price + ' р.'}}</td>
-                </tr>
-                <tr >
-                    <td style="font-weight: lighter; color: grey" class="tdPadd">
-                        {{item.ScreenDiagonal + '"' + ' ' + item.ScreenHeightPx + ' x ' + item.ScreenWidthPx + ' ' + item.ScreenSurface + ', ' }}
-                        {{item.CPU + ' ' + item.CPUName + ' ' + item.CPUFrequency + ' МГц, ' + item.SizeRAM + ' Гб, ' + item.SizeHD + ' Гб ('}}
-                        {{item.TypeHD + '), ' + item.GA + ' (' + item.TypeGA + '), цвет крышки ' + item.CapColor + ', цвет корпуса ' + item.BodyColor}}
-                        {{' , габариты ' + item.Width + ' x ' + item.Depth + ' x ' + item.Thickness + ' мм, вес ' + item.Weight + ' г, '}}
-                        {{'тип ' + item.Type + ', год выхода на рынок ' + item.ReleaseDate + ' г'}}
-                    </td>
-                    <td></td>
-                </tr>
-            </tbody>
+    <div style="width: 70%; height: 30px" ng-style="styleExpending"> <!--#eefeeb #f7fff3-->
+        <div style="margin-left: auto; margin-right: auto; margin-bottom: 30px; width: 260px; height:30px; font-weight: 900; font-size: large; color: rgba(12, 25, 105, 0.92)">
+            <p ng-click="expendAddBlock()">{{optionOfLaptop + ' ноутбука ↓↑'}}</p>
+        </div>
+
+        <table style=" width:100%; visibility:hidden" ng-style="styleOpacity">
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Общая информация
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Название модели
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="Name" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Год выхода на рынок, г.
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="ReleaseDate"  class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Тип
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="Type" class="inputSizeInputForLp">
+                        <option value="рабочий (офисный)">рабочий (офисный)</option>
+                        <option value="универсальный">универсальный</option>
+                        <option value="игровой (геймерский)">игровой (геймерский)</option>
+                        <option value="домашний (мультимедийный)">домашний (мультимедийный)</option>
+                        <option value="ультрабук">ультрабук</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Процессор
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Семейство процессора
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="CPU" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Модель процессора
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="CPUName" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Количество ядер, шт.
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="NumberOfCores" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Частота процессора, МГц
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="CPUFrequency" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Энергопотребление, Вт
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="CPUConsumption" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Конструкция
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Материал корпуса
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="BodyMaterial" class="inputSizeInputForLp">
+                        <option value="металл">металл</option>
+                        <option value="пластик">пластик</option>
+                        <option value="металл, пластик">металл, пластик</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Цвет корпуса
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="BodyColor" class="inputSizeInputForLp">
+                        <option value="черный">черный</option>
+                        <option value="серебристый">серебристый</option>
+                        <option value="белый">белый</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Материал крышки
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="CapMaterial" class="inputSizeInputForLp">
+                        <option value="металл">металл</option>
+                        <option value="пластик">пластик</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Цвет крышки
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="CapColor" class="inputSizeInputForLp">
+                        <option value="черный">черный</option>
+                        <option value="серебристый">серебристый</option>
+                        <option value="белый">белый</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Размеры и вес
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Ширина, мм
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="Width" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Глубина, мм
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="Depth" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Толщина, мм
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="Thickness" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Вес, г
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="Weight"  class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Экран
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Диагональ, дюймы
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="ScreenDiagonal" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Разрешение, ширина
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="ScreenHeightPx" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Разрешение, высота
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="ScreenWidthPx"  class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Технология
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="ScreenTechnology" class="inputSizeInputForLp">
+                        <option value="TN+Film">TN+Film</option>
+                        <option value="IPS">IPS</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Поверхность
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="ScreenSurface" class="inputSizeInputForLp">
+                        <option value="глянцевая">глянцевая</option>
+                        <option value="матовая">матовая</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Сенсорный экран
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <span style="margin-right:50px"><input name="AnswerTouch" type="radio" value='1' ng-model="IsTouchScreen" /> Да </span>
+                    <span><input name="AnswerTouch" type="radio" value='0' ng-model="IsTouchScreen" /> Нет </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Поддержка 3D
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <span style="margin-right:50px"><input name="Answer" type="radio" value='1' ng-model="Is3DScreen" /> Да </span>
+                    <span><input name="Answer" type="radio" value='0' ng-model="Is3DScreen" /> Нет </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Оперативаня память
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Тип
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="TypeRAM" class="inputSizeInputForLp">
+                        <option value="DDR3">DDR3</option>
+                        <option value="DDR3L">DDR3L</option>
+                        <option value="DDR4">DDR4</option>
+                        <option value="LPDDR3">LPDDR3</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Объем RAM, Гб
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="SizeRAM" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Максимальный объем RAM, Гб
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="MaxSizeRAM" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Количество слотов RAM
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="NumberOfRAMSlots" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Хранение данных
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Тип жесткого диска
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="TypeHD" class="inputSizeInputForLp">
+                        <option value="HDD">HDD</option>
+                        <option value="SDD + HDD">SDD + HDD</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Емкость жесткого диска, Гб
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="SizeHD" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Скорость вращения диска, RPM
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="SpeedHD" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Графика
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Графический адаптер
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="GA" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Тип графического адаптера
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <select ng-model="TypeGA" class="inputSizeInputForLp">
+                        <option value="дискретный">дискретный</option>
+                        <option value="встроенный">встроенный</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd">
+                    Объем видеопамяти
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="SizeVRAM" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Аккумулятор
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd" >
+                    Количество ячеек, шт.
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="NumberOfBatteryCells" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tdFormZag grey">
+                    Другое
+                </td>
+            </tr>
+
+            <!--<tr style="visibility: hidden">
+                <td class="tdPaddingForFirstTd">
+                    Изображение
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="text" ng-model="MainPicture" class="inputSizeInputForLp" />
+                </td>
+            </tr>-->
+
+            <tr ng-style="styleChangingItem">
+                <td class="tdPaddingForFirstTd">
+                    Изображение
+                </td>
+                <td class="tdPaddForSecondTd">
+                    <input type="file" class="inputSizeInputForLp" id="uploadFile" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tdPaddingForFirstTd" style="padding-bottom:20px">
+                    Цена, руб.
+                </td>
+                <td class="tdPaddForSecondTd" style="padding-bottom:20px">
+                    <input type="text" ng-model="Price" class="inputSizeInputForLp" />
+                </td>
+            </tr>
+
+            <tr style="border-bottom:2px solid grey">
+                <td class="tdPaddingForFirstTd" style="padding-bottom:10px">
+                    <button style="width: 50%" ng-click="cancelClick()">Отмена</button>
+                </td>
+                <td class="tdPaddForSecondTd" style="padding-bottom:10px">
+                    <button style="margin-left:25%; width:25%" ng-click="createOrPutItem()">Сохранить</button>
+                </td>
+            </tr>
         </table>
-        <br />
     </div>
 
+    <div style="margin-top:30px">
+        <div ng-repeat="item in items | filter:search | orderBy:orderProp:sortReverse">
+            <!--ng-click="FFF()-->
+            <br />
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="150px" rowspan="3"><img style="padding:5px" width="140px" ng-src="app/images/{{item.MainPicture}}"></td> <!--border: 2px solid lightgray;-->
+                        <td style="font-weight: 900; font-size: large" class="tdPadd"><a href="#/laptops/{{item.Id}}">{{item.Name}}</a></td>
+                        <td width="30%" style="font-weight: 900; font-size: large" class="tdPadd">{{item.Price + ' р.'}}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: lighter; color: grey" class="tdPadd">
+                            {{item.ScreenDiagonal + '"' + ' ' + item.ScreenHeightPx + ' x ' + item.ScreenWidthPx + ' ' + item.ScreenSurface + ', ' }}
+                            {{item.CPU + ' ' + item.CPUName + ' ' + item.CPUFrequency + ' МГц, ' + item.SizeRAM + ' Гб, ' + item.SizeHD + ' Гб ('}}
+                            {{item.TypeHD + '), ' + item.GA + ' (' + item.TypeGA + '), цвет крышки ' + item.CapColor + ', цвет корпуса ' + item.BodyColor}}
+                            {{' , габариты ' + item.Width + ' x ' + item.Depth + ' x ' + item.Thickness + ' мм, вес ' + item.Weight + ' г, '}}
+                            {{'тип ' + item.Type + ', год выхода на рынок ' + item.ReleaseDate + ' г'}}
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right; padding-right:20px; padding-top:10px">
+                            <button style="background-color: #b9f286; border-width: 0px" ng-click="changeFunc(item)">Изменить</button>
+                            <button style="background-color:#ffb2be; border-width:0px" ng-click="delItem(item)">Удалить</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+        </div>
+    </div>
 </div>

@@ -44,3 +44,138 @@ E:\STUDIES\epam\Laptops\Laptops\bin\ru\System.Web.WebPages.Razor.resources.dll
 E:\STUDIES\epam\Laptops\Laptops\obj\Debug\Laptops.dll
 E:\STUDIES\epam\Laptops\Laptops\obj\Debug\Laptops.pdb
 E:\STUDIES\epam\Laptops\Laptops\obj\Debug\Laptops.csprojResolveAssemblyReference.cache
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Laptops.dll.config
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Laptops.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Laptops.pdb
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Antlr3.Runtime.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\EntityFramework.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\EntityFramework.SqlServer.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Microsoft.Web.Infrastructure.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Newtonsoft.Json.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Net.Http.Formatting.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Helpers.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Http.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Http.WebHost.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Mvc.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Optimization.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Razor.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.WebPages.Deployment.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.WebPages.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.WebPages.Razor.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\WebGrease.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\EntityFramework.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\EntityFramework.SqlServer.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Newtonsoft.Json.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Net.Http.Formatting.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Helpers.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Http.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Http.WebHost.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Mvc.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Optimization.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.Razor.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.WebPages.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.WebPages.Deployment.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\System.Web.WebPages.Razor.xml
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\Antlr3.Runtime.pdb
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Net.Http.Formatting.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.Helpers.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.Http.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.Http.WebHost.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.Mvc.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.Optimization.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.Razor.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.WebPages.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\obj\Debug\Laptops.dll
+E:\STUDIES\epam\Git Laptops\Laptops\Laptops\obj\Debug\Laptops.pdb
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Laptops.dll.config
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Laptops.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Laptops.pdb
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Antlr3.Runtime.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\EntityFramework.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\EntityFramework.SqlServer.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Microsoft.Web.Infrastructure.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Newtonsoft.Json.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Net.Http.Formatting.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Helpers.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Http.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Http.WebHost.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Mvc.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Optimization.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Razor.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.WebPages.Deployment.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.WebPages.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.WebPages.Razor.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\WebGrease.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\EntityFramework.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\EntityFramework.SqlServer.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Newtonsoft.Json.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Net.Http.Formatting.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Helpers.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Http.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Http.WebHost.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Mvc.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Optimization.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.Razor.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.WebPages.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.WebPages.Deployment.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\System.Web.WebPages.Razor.xml
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\Antlr3.Runtime.pdb
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Net.Http.Formatting.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.Helpers.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.Http.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.Http.WebHost.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.Mvc.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.Optimization.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.Razor.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.WebPages.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\obj\Debug\Laptops.dll
+E:\STUDIES\epam\Git Laptops\copy\Laptops\Laptops\obj\Debug\Laptops.pdb
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Laptops.dll.config
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Laptops.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Laptops.pdb
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Antlr3.Runtime.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\EntityFramework.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\EntityFramework.SqlServer.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Microsoft.Web.Infrastructure.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Newtonsoft.Json.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Net.Http.Formatting.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Helpers.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Http.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Http.WebHost.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Mvc.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Optimization.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Razor.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.WebPages.Deployment.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.WebPages.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.WebPages.Razor.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\WebGrease.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\EntityFramework.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\EntityFramework.SqlServer.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Newtonsoft.Json.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Net.Http.Formatting.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Helpers.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Http.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Http.WebHost.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Mvc.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Optimization.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.Razor.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.WebPages.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.WebPages.Deployment.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\System.Web.WebPages.Razor.xml
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\Antlr3.Runtime.pdb
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Net.Http.Formatting.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.Helpers.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.Http.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.Http.WebHost.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.Mvc.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.Optimization.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.Razor.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.WebPages.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\obj\Debug\Laptops.dll
+D:\STUDY\epam\12.07.2016\Laptops\Laptops\obj\Debug\Laptops.pdb

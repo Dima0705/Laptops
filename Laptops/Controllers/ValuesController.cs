@@ -35,7 +35,7 @@ namespace Laptops.Controllers
         {
             db.Laptops.Add(laptop);
             db.SaveChanges();
-            return laptop;          
+            return laptop;
         }
 
         // PUT api/values/5
@@ -54,6 +54,13 @@ namespace Laptops.Controllers
             Laptop laptop = db.Laptops.Find(id);
             if (laptop != null)
             {
+                var pictures = db.Pictures.Where(p => p.LaptopsId == id).ToList<Picture>();
+                if (pictures != null)
+                {
+                    db.Pictures.RemoveRange(pictures);
+                    db.SaveChanges();
+                }
+
                 db.Laptops.Remove(laptop);
                 db.SaveChanges();
             }
